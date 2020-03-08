@@ -1,0 +1,23 @@
+#test-gui-master {
+  margin: 20px;
+  background-color: aliceblue;
+}
+.config-widget {
+  height: 700px;
+  margin-left: 5px;
+}
+.widget-controler {
+  margin-left: 7px;
+  margin-bottom: 10px;
+}
+.edit-config-window {
+  height: 700px;
+}
+.testBtn {
+  width: auto !important;
+  padding: 0 !important;
+}
+.editBtn {
+  width: auto !important;
+  padding: 0 !important;
+}

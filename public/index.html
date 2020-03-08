@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FG test-gui</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="./fusiongrid.css" />
+  <link rel="stylesheet" href="../resources/codemirror.min.css" />
+  <link rel="stylesheet" href="./test-gui.css" />
+</head>
+
+<body>
+  <div id="test-gui-master">
+    <div class="ui grid">
+      <div class="five wide column">
+        <div class="config-segment">
+          <div class="row widget-controler">
+            <div class="ui grid">
+              <div class="ten wide column">
+                <div class="ui primary pointing compact menu">
+                  <a class="active item" onClick="showWidgetOrEditor(1,0);">
+                    <i class="cogs icon testBtn"></i> Test
+                  </a>
+                  <a class="item" onClick="showWidgetOrEditor(2,0);">
+                    <i class="code icon editBtn"></i> Edit
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="config-widget">
+            <div class="ui styled fluid accordion">
+              <div class="title active">
+                <i class="dropdown icon"></i>
+                feature 1
+              </div>
+              <div class="content active">
+                <p class="transition visible"> configs</p>
+              </div>
+            </div>
+          </div>
+          <div class="edit-config-window" style="display: none;">
+            <div class="editor"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ten wide column">
+        <div class="grid-container"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="../resources/codemirror.min.js"></script>
+  <script src="../resources/codemirror-javascript.min.js"></script>
+  <script src="./fusiondatastore.js"></script>
+  <script src="./fusiongrid.js"></script>
+  <script src="./test-gui.js"></script>
+</body>
+
+</html>
