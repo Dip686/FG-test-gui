@@ -1,13 +1,17 @@
 $('.ui.accordion')
   .accordion()
 ;
+$('.ui.selection')
+  .dropdown()
+;
 var dataEditor = CodeMirror(document.getElementsByClassName('editor')[0],{
   value: "  {enable: true, show: true}\n",
   mode: {name: 'javascript', json: true},
   lineNumbers: true,
-  lineWrapping: true
+  lineWrapping: true,
+  theme: 'mdn-like'
 });
-dataEditor.setSize('100%', 600);
+dataEditor.setSize('100%', 700);
 // holds number of config segments
 var configSegmentCount = 1;
 function showWidgetOrEditor (id, editorInstance) {
@@ -45,3 +49,12 @@ function showWidgetOrEditor (id, editorInstance) {
   }
 
 }
+function createGrid(ele, ds, config) {
+  return new FusionGrid(ele, ds, config);
+}
+var firstGridContainer = document.getElementsByClassName('grid-container')[0],
+  dsObj = new FusionDataStore(),
+  dtObj = dsObj.createDataTable(data, schema),
+  firstConfig = {},
+  firstGrid = createGrid(firstGridContainer, dtObj, firstConfig);
+firstGrid.render();

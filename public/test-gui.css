@@ -1,6 +1,7 @@
 #test-gui-master {
   margin: 20px;
   background-color: aliceblue;
+  padding-right: 10px;
 }
 .config-widget {
   height: 700px;
@@ -20,4 +21,12 @@
 .editBtn {
   width: auto !important;
   padding: 0 !important;
+}
+.grid-container {
+  height: 700px;
+  width: auto;
+  margin-right: 5px !important;
+}
+.versionDropDown {
+  margin-bottom: 1px !important;
 }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <link rel="stylesheet" href="./fusiongrid.css" />
   <link rel="stylesheet" href="../resources/codemirror.min.css" />
+  <link rel="stylesheet" href="../resources/codemirror-mdn-like-theme.css" />
   <link rel="stylesheet" href="./test-gui.css" />
 </head>
 
@@ -41,13 +42,21 @@
               </div>
             </div>
           </div>
-          <div class="edit-config-window" style="display: none;">
+          <div class="ui fluid card edit-config-window" style="display: none;">
             <div class="editor"></div>
           </div>
         </div>
       </div>
-      <div class="ten wide column">
-        <div class="grid-container"></div>
+      <div class="eleven wide column">
+        <div>
+          <select class="ui selection dropdown versionDropDown">
+            <option value="develop">develop</option>
+            <option value="FG-Milestone-1">FG-Milestone-1</option>
+            <option value="FG-Milestone-2">FG-Milestone-2</option>
+            <option value="FG-Milestone-3">FG-Milestone-3</option>
+          </select>
+        </div>
+        <div class="grid-container ui fluid card"></div>
       </div>
     </div>
   </div>
@@ -55,6 +64,7 @@
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <script src="../resources/codemirror.min.js"></script>
+  <script src="../generator/data.js"></script>
   <script src="../resources/codemirror-javascript.min.js"></script>
   <script src="./fusiondatastore.js"></script>
   <script src="./fusiongrid.js"></script>
