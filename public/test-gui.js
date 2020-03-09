@@ -1,5 +1,7 @@
 $('.ui.accordion')
-  .accordion()
+  .accordion({
+    exclusive: false
+  })
 ;
 $('.ui.selection')
   .dropdown()
