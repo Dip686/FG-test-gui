@@ -5764,7 +5764,8 @@
 	    cardInfoRowHeight: DEFAULT_CARD_INFO_ROW_HEIGHT_CARD
 	}, setMinColumnWidth = function (container) {
 	    var fontSize = '' + window.getComputedStyle(container).fontSize, styleObject = {
-	        'font-size': fontSize
+					'font-size': fontSize,
+					'max-width': 'max-content'
 	    };
 	    MIN_COLUMN_WIDTH = 32 + getSpanDimension(document, container, styleObject, 'W...').width;
 	}, getMinColumnWidth = function () { return MIN_COLUMN_WIDTH; }, dummyFunc = function () { return; }, parseBoolean = function () {
